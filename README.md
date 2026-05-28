@@ -4,3 +4,8 @@ Two scripts are provided: `UpdateLibrariesFromTransfersByName.pas` only checks t
 
 These scripts are tested and confirmed working on Altium Designer Agile 26.6.0 with Windows 11 Pro 25H2 running on an Asus NUC13ANK.
 
+## Running the scripts
+
+In Altium Designer, these `.pas` script files can either be dragged directly into the Project sidebar, or a new Script Project can be created by navigating to File > New > Script > Script Project and the files added to that.
+
+Once the script is open in Altium, 
