@@ -1,8 +1,34 @@
 # Altium Library Updater
 
+Update multiple Altium schematic and PCB library files with the components in two specified `.schlib` and `.pcblib` files.
+
 Two scripts are provided: `UpdateLibrariesFromTransfersByName.pas` only checks the names of the components in `.SchLib` and `.PcbLib` files, and `UpdateLibrariesFromTransfersByMPN.pas` checks the manufacturer part numbers of the components `.SchLib` files but only checks the name of the components in `.PcbLib` files, as footprints typically don't have manufacturer part numbers associated with them.
 
 These scripts are tested and confirmed working on Altium Designer Agile 26.6.0 with Windows 11 Pro 25H2 running on an Asus NUC13ANK.
+
+## Modifying the scripts
+
+The paths in the `const` section should be updated to match the primary library locations of the project. The paths `BuildHardcodedSchTargets` and `BuildHardcodedPcbTargets` should be updated accordingly as well with the library file names.
+
+`ALTIUM_LIB_ROOT`: Primary folder where the libraries are stored
+
+`SOURCE_SCHLIB`: The `.schlib` file that contains the updated components being pushed to the project libraries.
+
+`SOURCE_PCBLIB`: The `.pcblib` file that contains the updated components being pushed to the project libraries.
+
+`EXTRA_TARGET_SCHLIB`: Additional `.schlib` file to be updated if need be.
+
+`EXTRA_TARGET_PCBLIB`: Additional `.pcblib` file to be updated if need be.
+
+`LOG_FILE`: Path to store log file of updates.
+
+### Additional parameters:
+
+`DRY_RUN`: Set to `True` to simulate a run and output a log file without actually making any changes. Good to confirm what would be changed by the script.
+
+`PRESERVE_TARGET_LIBREF`: After replacing the original component with the updated one, make sure that the reference designator remains the same for the project to avoid breaking parts that have already been placed. Recommended: `True`
+
+`USE_PART_NUMBER_AS_MPN_FALLBACK`:  Set `True` only if the project libraries consistently use generic "Part Number" as manufacturer part number. Leaving this `False` avoids false matches.
 
 ## Running the scripts
 
