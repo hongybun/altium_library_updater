@@ -22,7 +22,7 @@ The paths in the `const` section should be updated to match the primary library 
 
 `LOG_FILE`: Path to store log file of updates.
 
-### Additional parameters:
+### Additional parameters for `UpdateLibrariesFromTransfersByMPN.pas`:
 
 `DRY_RUN`: Set to `True` to simulate a run and output a log file without actually making any changes. Good to confirm what would be changed by the script.
 
