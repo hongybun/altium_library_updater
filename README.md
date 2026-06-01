@@ -20,4 +20,4 @@ Open the top level schematic (`SchDoc`), then go to Tools > Update from Librarie
 
 Open the layout (`.PcbDoc`) and go to Tools > Update From PCB Libraries. In the pop-up options window, make sure all of the layers are selected, then click Update All Footprints (Create ECO). In the new ECO window, make sure that all the components are selected and click Execute Changes.
 
-The Altium project should now have all oof its components updated with the parts from the new library.
+The Altium project should now have all of its components updated with the parts from the new library.
