@@ -8,7 +8,7 @@ These scripts are tested and confirmed working on Altium Designer Agile 26.6.0 w
 
 In Altium Designer, these `.pas` script files can either be dragged directly into the Project sidebar, or a new Script Project can be created by navigating to File > New > Script > Script Project and the files added to that.
 
-Once the script is open in Altium, save it. Then edit the file paths in the script to the relevant ones for the current project.
+Once the desired script is open in Altium, save it. Then edit the file paths in the script to the relevant ones for the current project.
 
 To run the script, go to Run > Set Project Startup Procedure, then in the pop-up window, select the item that starts with `RunBulkReplaceFromTransfers` and select Okay. Then go to Run > Run or press F9 to run the script.
 
